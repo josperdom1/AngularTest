@@ -1,0 +1,21 @@
+<nav class="navbar navbar-dark bg-primary">
+  <a href="/" class="navbar-brand">Angular link vote</a>
+</nav>
+
+  <div class="container p-4">
+    <div class="rom">
+      <div class="col-md-8 offset-md-2">
+        <div class="card text-center mt-2">
+          <h3 class="card-header">Add a link</h3>
+          <form action="" class="card-body">
+            <label for="title">Title:</label>
+            <input type="text" name="title" #title class="form-control" autofocus>
+            <label for="title">Link:</label>
+            <input type="text" name="link" #link class="form-control">
+            <button (click)="addLink(title, link)" class="btn btn-primary btn-block mt-4">Submit</button>
+          </form>
+        </div>
+      </div>
+      <app-link *ngFor="let link of links" [link]=link></app-link>
+    </div>
+  </div>
